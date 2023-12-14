@@ -1,13 +1,16 @@
-import React from "react";
-
-import "./styles.js";
-import Details from "./components/Details/Details";
+import React, { useContext } from "react";
 import { Grid } from "@material-ui/core";
-import useStyles from "./styles.js";
+
+import Details from "./components/details/Details";
+import Main from "./components/main/Main";
+
+import useStyles from "./styles";
+import { ExpenseTrackerContext } from "./context/context";
 
 function App() {
+  const appName = useContext(ExpenseTrackerContext);
   const classes = useStyles();
-
+  console.log("appName", appName);
   return (
     <div>
       <Grid
@@ -19,13 +22,13 @@ function App() {
         style={{ height: "100vh" }}
       >
         <Grid item xs={12} sm={4}>
-          <Details />
+          <Details title="Income" />
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <Main />
         </Grid>
         <Grid item xs={12} sm={4}>
-          Main
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Details />
+          <Details title="Expense" />
         </Grid>
       </Grid>
     </div>
