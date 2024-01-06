@@ -26,15 +26,7 @@ mongoose
 
 // app.use(): This method in Express.js is used to mount middleware functions or middleware routers in the application's request processing pipeline.
 
-app.use(
-  cors({
-    origin: [
-      "https://expense-tracker-frontend-or068h9i4-sarthaksg1997s-projects.vercel.app/",
-    ],
-    method: ["GET", "POST"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(cookieParser());
 // This line adds the cookieParser middleware to your Express application. cookieParser is a middleware that parses cookies attached to the client's request and makes them available in the req.cookies object. It simplifies working with cookies in your application.
