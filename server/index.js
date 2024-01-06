@@ -13,10 +13,13 @@ app.listen(port, () => {
 
 // We are connecting this node.js app with mongodb by using mongoose connect method
 mongoose
-  .connect("mongodb://localhost:27017/expense-tracker", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://sarthakg662:CNyEwzZVx7MB8aw@cluster2024.wc0g5os.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("MongoDB connection successful");
   })
@@ -26,7 +29,13 @@ mongoose
 
 // app.use(): This method in Express.js is used to mount middleware functions or middleware routers in the application's request processing pipeline.
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://expense-tracker-frontend-sandy.vercel.app/"],
+    method: ["GET", "POST"],
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 // This line adds the cookieParser middleware to your Express application. cookieParser is a middleware that parses cookies attached to the client's request and makes them available in the req.cookies object. It simplifies working with cookies in your application.
