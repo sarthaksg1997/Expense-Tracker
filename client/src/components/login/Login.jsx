@@ -32,7 +32,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const { data } = await axios.post(
-        "https://expense-tracker-six-psi.vercel.app/login",
+        "https://expense-tracker-server-sigma.vercel.app/login",
         {
           ...formData,
         },

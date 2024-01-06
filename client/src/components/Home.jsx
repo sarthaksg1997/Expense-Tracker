@@ -21,7 +21,7 @@ function Home() {
         navigate("/login");
       } else {
         const { data } = await axios.post(
-          "https://expense-tracker-six-psi.vercel.app/",
+          "https://expense-tracker-server-sigma.vercel.app/",
           {},
           {
             withCredentials: true,
