@@ -12,20 +12,20 @@ app.listen(port, () => {
 });
 
 // We are connecting this node.js app with mongodb by using mongoose connect method
-mongoose
-  .connect(
-    "mongodb+srv://sarthakg662:CNyEwzZVx7MB8aw@cluster2024.wc0g5os.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
-  .then(() => {
-    console.log("MongoDB connection successful");
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+// mongoose
+//   .connect(
+//     "mongodb+srv://sarthakg662:CNyEwzZVx7MB8aw@cluster2024.wc0g5os.mongodb.net/?retryWrites=true&w=majority",
+//     {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//     }
+//   )
+//   .then(() => {
+//     console.log("MongoDB connection successful");
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
 
 // app.use(): This method in Express.js is used to mount middleware functions or middleware routers in the application's request processing pipeline.
 
