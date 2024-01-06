@@ -21,7 +21,7 @@ function Home() {
         navigate("/login");
       } else {
         const { data } = await axios.post(
-          "http://localhost:4000",
+          "https://expense-tracker-server-sarthaksg1997s-projects.vercel.app/",
           {},
           {
             withCredentials: true,

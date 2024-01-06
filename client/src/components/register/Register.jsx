@@ -32,7 +32,7 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/register",
+        "https://expense-tracker-server-sarthaksg1997s-projects.vercel.app/",
         {
           ...formData,
         },

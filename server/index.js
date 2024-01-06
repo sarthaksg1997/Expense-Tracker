@@ -28,7 +28,9 @@ mongoose
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: [
+      "https://expense-tracker-frontend-or068h9i4-sarthaksg1997s-projects.vercel.app/",
+    ],
     method: ["GET", "POST"],
     credentials: true,
   })

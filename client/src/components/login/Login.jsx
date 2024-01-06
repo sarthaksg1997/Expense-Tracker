@@ -32,7 +32,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/login",
+        "https://expense-tracker-server-sarthaksg1997s-projects.vercel.app//login",
         {
           ...formData,
         },
