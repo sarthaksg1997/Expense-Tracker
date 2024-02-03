@@ -32,7 +32,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const { data } = await axios.post(
-        "/login",
+        "http://localhost:4000/login",
         {
           ...formData,
         },

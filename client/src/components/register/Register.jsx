@@ -32,7 +32,7 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       const { data } = await axios.post(
-        "/register",
+        "http://localhost:4000/register",
         {
           ...formData,
         },
