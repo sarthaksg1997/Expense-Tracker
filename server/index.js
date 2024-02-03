@@ -3,6 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const authRoutes = require("./Routes/AuthRoutes");
 const cookieParser = require("cookie-parser");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 const port = 4000;
@@ -14,7 +17,7 @@ app.listen(port, () => {
 // We are connecting this node.js app with mongodb by using mongoose connect method
 mongoose
   .connect(
-    "mongodb+srv://sarthakg662:CNyEwzZVx7MB8aw@cluster2024.wc0g5os.mongodb.net/?retryWrites=true&w=majority"
+    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster2024.wc0g5os.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log("MongoDB connection successful");
@@ -27,7 +30,7 @@ mongoose
 
 app.use(
   cors({
-    origin: ["https://expense-tracker-frontend-sandy.vercel.app/"],
+    origin: ["http://localhost:3000"],
     method: ["GET", "POST"],
     credentials: true,
   })

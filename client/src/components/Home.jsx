@@ -21,7 +21,7 @@ function Home() {
         navigate("/login");
       } else {
         const { data } = await axios.post(
-          "https://expense-tracker-server-sigma.vercel.app/",
+          "http://localhost:4000",
           {},
           {
             withCredentials: true,
